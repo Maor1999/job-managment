@@ -1,9 +1,12 @@
 import sendResponse from "./sendResponse.js";
-import mongoose from "mongoose";
 
 const validateObjectId = (req, res, next) => {
-  const id = req.params.id;
-  if (!id || !mongoose.Types.ObjectId.isValid(id)) {
+  const raw = req.params.id ?? "";
+  const id = String(raw).trim();
+
+  const isValid = /^[0-9a-fA-F]{24}$/.test(id);
+
+  if (!isValid) {
     return sendResponse({
       res,
       statusCode: 400,
@@ -11,7 +14,9 @@ const validateObjectId = (req, res, next) => {
       data: null,
     });
   }
+
+  req.params.id = id; 
   next();
 };
-  
-  export default validateObjectId
+
+export default validateObjectId;
