@@ -27,6 +27,7 @@ dockerfile – Node 20 image; installs deps, copies app, exposes 3000, runs serv
 .dockerignore – Excludes node_modules, .env from build context
 
 .gitignore – Ignores node_modules, .env locally
+
 How to run?
 Create .env:
 
@@ -34,9 +35,10 @@ MONGODB_URL=mongodb://host.docker.internal:27017/jobsDB
 PORT=3000
 NODE_ENV=development
 
-
+מג
 Build & run:
-
+*note: you must download docker desktop and run it
+link:https://www.docker.com/products/docker-desktop/
 docker build -t backend-image .
 docker run -d --name jobs-api --restart unless-stopped --env-file .env -p 3000:3000 backend-image
 
@@ -56,7 +58,7 @@ NODE_ENV=development
 
 
 Install & start:
-
+גגגג
 npm ci
 npm start
 
