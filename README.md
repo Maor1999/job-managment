@@ -36,7 +36,6 @@ MONGODB_URL=mongodb://host.docker.internal:27017/jobsDB
 PORT=3000
 NODE_ENV=development
 
-מג
 Build & run:
 
 note: you must download docker desktop and run it
