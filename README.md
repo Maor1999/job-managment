@@ -29,6 +29,7 @@ dockerfile – Node 20 image; installs deps, copies app, exposes 3000, runs serv
 .gitignore – Ignores node_modules, .env locally
 
 How to run?
+
 Create .env:
 
 MONGODB_URL=mongodb://host.docker.internal:27017/jobsDB
@@ -37,7 +38,8 @@ NODE_ENV=development
 
 מג
 Build & run:
-*note: you must download docker desktop and run it
+
+note: you must download docker desktop and run it
 
 link:https://www.docker.com/products/docker-desktop/
 
