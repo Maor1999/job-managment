@@ -38,7 +38,9 @@ NODE_ENV=development
 מג
 Build & run:
 *note: you must download docker desktop and run it
+
 link:https://www.docker.com/products/docker-desktop/
+
 docker build -t backend-image .
 docker run -d --name jobs-api --restart unless-stopped --env-file .env -p 3000:3000 backend-image
 
