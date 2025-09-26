@@ -61,7 +61,7 @@ NODE_ENV=development
 
 
 Install & start:
-גגגג
+
 npm ci
 npm start
 
